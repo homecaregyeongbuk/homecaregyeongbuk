@@ -3,50 +3,422 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>홈케어솔루션경북점</title>
+<title>홈케어솔루션경북점 | 가전제품 분해청소</title>
+<meta name="description" content="홈케어솔루션경북점 - 에어컨, 세탁기, 냉장고 분해청소 전문팀장 방문">
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Malgun Gothic', sans-serif;
+  color: #263449;
+  line-height: 1.7;
+  background: #f4f7fb;
+}
+
+header {
+  background: #102b50;
+  color: white;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 25px;
+}
+
+header p {
+  font-size: 14px;
+  color: #d6e6fa;
+}
+
+nav {
+  background: #183d69;
+  text-align: center;
+  padding: 12px 5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #102b50, #2673bd);
+  color: white;
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ffc83d;
+  color: #173353;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 18px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 25px;
+  color: #15365e;
+  margin-bottom: 25px;
+}
+
+.intro {
+  background: white;
+  text-align: center;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+.intro p {
+  margin: 8px 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+.cardbody {
+  padding: 18px;
+}
+
+.card h3 {
+  color: #173d69;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #586779;
+}
+
+.price {
+  color: #1766ad;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
   padding: 10px;
 }
+
 .photo-gallery img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 10px;
 }
-@media(min-width:721px) {
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid #dce4ee;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.price-table th {
+  background: #183d69;
+  color: white;
+}
+
+.price-table tr:nth-child(even) {
+  background: #f0f5fb;
+}
+
+.notice {
+  background: #e8f2fc;
+  border-left: 5px solid #2673bd;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.contact {
+  background: #102b50;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  padding: 35px 15px;
+}
+
+.contact h2 {
+  margin-bottom: 12px;
+}
+
+.phone {
+  display: inline-block;
+  color: #ffd45a;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+footer {
+  background: #0b203b;
+  color: #d7e3f1;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 13px;
+}
+
+.bottom-bar {
+  display: none;
+}
+
+@media (min-width: 721px) {
   .photo-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 21px;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    margin: 0 5px;
+    font-size: 12px;
+  }
+
+  .bottom-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background: #102b50;
+  }
+
+  .bottom-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 13px 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  body {
+    padding-bottom: 48px;
+  }
+}
 </style>
 </head>
+
 <body>
 
+<header>
+  <h1>홈케어솔루션경북점</h1>
+  <p>가전제품 분해청소 전문업체</p>
+</header>
 
-<article class="card">
-  <div class="photo-gallery">
-    <img src="KakaoTalk_20261116_173827865_12.jpg" alt="에어컨 청소 1">
-    <img src="KakaoTalk_20261116_173827865_14.jpg" alt="에어컨 청소 2">
-    <img src="KakaoTalk_20261116_173827865_15.jpg" alt="에어컨 청소 3">
-    <img src="KakaoTalk_20261116_173827865_16.jpg" alt="에어컨 청소 4">
-    <img src="KakaoTalk_20261116_173827865_24.jpg" alt="에어컨 청소 5">
-    <img src="KakaoTalk_20261116_173827865_25.jpg" alt="에어컨 청소 6">
-    <img src="KakaoTalk_20261116_173834025.jpg" alt="에어컨 청소 7">
-    <img src="KakaoTalk_20261116_173834025_06.jpg" alt="에어컨 청소 8">
-    <img src="KakaoTalk_20261116_173834025_07.jpg" alt="에어컨 청소 9">
-    <img src="KakaoTalk_20261116_173834025_08.jpg" alt="에어컨 청소 10">
+<nav>
+  <a href="#home">홈</a>
+  <a href="#about">업체소개</a>
+  <a href="#service">서비스</a>
+  <a href="#price">가격표</a>
+  <a href="#contact">문의</a>
+</nav>
+
+<div class="hero" id="home">
+  <h2>깨끗한 가전, 쾌적한 우리 집</h2>
+  <p>보이지 않는 곳까지 꼼꼼하게 분해청소합니다.</p>
+  <a class="btn" href="tel:01043582869">전화 상담하기</a>
+</div>
+
+<section id="about">
+  <h2 class="section-title">업체 소개</h2>
+  <div class="intro">
+    <h3>홈케어솔루션경북점</h3>
+    <p>전문팀장 직접 방문</p>
+    <p><strong>경력 10년 이상</strong></p>
+    <p>제품에 맞는 꼼꼼한 분해청소 서비스</p>
+    <p>예약 일정에 따른 방문 서비스 운영</p>
   </div>
-  <div class="cardbody">
-    <h3>에어컨·냉난방기 청소</h3>
-    <p>시스템 및 스탠드·벽걸이 에어컨 분해청소</p>
-    <div class="price">80,000원~</div>
+</section>
+
+<section id="service">
+  <h2 class="section-title">청소 서비스</h2>
+
+  <div class="cards">
+
+    <article class="card">
+      <div class="photo-gallery">
+        <img src="KakaoTalk_20261116_173827865_12.jpg" alt="에어컨 청소 1">
+        <img src="KakaoTalk_20261116_173827865_14.jpg" alt="에어컨 청소 2">
+        <img src="KakaoTalk_20261116_173827865_15.jpg" alt="에어컨 청소 3">
+        <img src="KakaoTalk_20261116_173827865_16.jpg" alt="에어컨 청소 4">
+        <img src="KakaoTalk_20261116_173827865_24.jpg" alt="에어컨 청소 5">
+        <img src="KakaoTalk_20261116_173827865_25.jpg" alt="에어컨 청소 6">
+        <img src="KakaoTalk_20261116_173834025.jpg" alt="에어컨 청소 7">
+        <img src="KakaoTalk_20261116_173834025_06.jpg" alt="에어컨 청소 8">
+        <img src="KakaoTalk_20261116_173834025_07.jpg" alt="에어컨 청소 9">
+        <img src="KakaoTalk_20261116_173834025_08.jpg" alt="에어컨 청소 10">
+      </div>
+      <div class="cardbody">
+        <h3>에어컨·냉난방기 청소</h3>
+        <p>시스템 및 스탠드·벽걸이 에어컨 분해청소</p>
+        <div class="price">80,000원~</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="cardbody">
+        <h3>세탁기 분해청소</h3>
+        <p>세탁조 내부 및 주요 부품 분해세척</p>
+        <div class="price">70,000원~</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="cardbody">
+        <h3>냉장고 청소</h3>
+        <p>냉장고 내부 및 오염 부위 청소</p>
+        <div class="price">50,000원~</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="cardbody">
+        <h3>공기청정기 청소</h3>
+        <p>제품 상태에 따른 분해 및 내부 세척</p>
+        <div class="price">별도 상담</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="cardbody">
+        <h3>주방후드 청소</h3>
+        <p>후드 및 필터 오염 제거</p>
+        <div class="price">별도 상담</div>
+      </div>
+    </article>
+
   </div>
-</article>
+</section>
+
+<section id="price">
+  <h2 class="section-title">홈케어솔루션 케어 단가표</h2>
+
+  <h3 style="margin-bottom:12px;color:#173d69;">시스템 에어컨</h3>
+  <table class="price-table">
+    <tr><th>종류</th><th>가격</th></tr>
+    <tr><td>1WAY</td><td>100,000원</td></tr>
+    <tr><td>2WAY</td><td>120,000원</td></tr>
+    <tr><td>4WAY</td><td>150,000원</td></tr>
+    <tr><td>360 시스템</td><td>180,000원</td></tr>
+  </table>
+
+  <h3 style="margin-bottom:12px;color:#173d69;">스탠드 에어컨</h3>
+  <table class="price-table">
+    <tr><th>종류</th><th>가격</th></tr>
+    <tr><td>일반 스탠드</td><td>130,000~250,000원</td></tr>
+    <tr><td>스탠드 2in1</td><td>180,000~250,000원</td></tr>
+  </table>
+
+  <h3 style="margin-bottom:12px;color:#173d69;">벽걸이 에어컨</h3>
+  <table class="price-table">
+    <tr><th>평형</th><th>가격</th></tr>
+    <tr><td>6평 이상~15평 미만</td><td>80,000원</td></tr>
+    <tr><td>15평 이상</td><td>100,000원</td></tr>
+  </table>
+
+  <div class="notice">
+    <strong>추가 안내</strong><br>
+    LG 듀얼, 삼성 무풍갤러리, 둘레바람, 오브제,
+    로봇청소 기능 모델 및 액자형·앙드레김·삼각형 모델은
+    추가 비용이 발생할 수 있습니다.<br><br>
+    상업용 에어컨은 별도 상담 바랍니다.<br>
+    세탁기 및 냉장고는 제품 종류와 상태에 따라 가격이 달라질 수 있습니다.
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>청소 예약 및 문의</h2>
+    <p>궁금하신 점은 전화로 편하게 문의해 주세요.</p>
+    <a class="phone" href="tel:01043582869">010-4358-2869</a>
+    <p>홈케어솔루션경북점</p>
+    <br>
+    <a class="btn" href="tel:01043582869">전화 상담하기</a>
+  </div>
+</section>
+
+<footer>
+  <p>홈케어솔루션경북점</p>
+  <p>가전제품 분해청소 전문</p>
+  <p>전화 : 010-4358-2869</p>
+  <p>© 홈케어솔루션경북점 All Rights Reserved.</p>
+</footer>
+
+<div class="bottom-bar">
+  <a href="tel:01043582869">☎ 전화 상담</a>
+  <a href="#service">서비스 보기</a>
+</div>
+
 </body>
 </html>
