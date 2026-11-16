@@ -4,49 +4,170 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>홈케어솔루션경북점 | 가전제품 분해청소</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,"Malgun Gothic",sans-serif;background:#f4f7fb;color:#26344a;line-height:1.7}
-header{background:linear-gradient(135deg,#10264a,#1769aa);color:white;text-align:center;padding:38px 15px}
+body{
+ margin:0;
+ font-family:Arial,"Malgun Gothic",sans-serif;
+ background:#f4f7fb;
+ color:#26344a;
+ line-height:1.7;
+}
+header{
+ background:linear-gradient(135deg,#10264a,#1769aa);
+ color:white;
+ text-align:center;
+ padding:38px 15px;
+}
 header h1{margin:0;font-size:29px}
 header p{margin:8px 0 0}
-nav{background:#10264a;text-align:center;padding:12px;position:sticky;top:0;z-index:10}
-nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
-.hero{background:linear-gradient(135deg,#e5f2ff,#fff);text-align:center;padding:55px 15px}
-.hero h2{font-size:27px;color:#123d70;margin:0 0 12px}
+nav{
+ background:#10264a;
+ text-align:center;
+ padding:12px;
+ position:sticky;
+ top:0;
+ z-index:10;
+}
+nav a{
+ color:white;
+ text-decoration:none;
+ margin:0 10px;
+ font-size:14px;
+}
+.hero{
+ background:linear-gradient(135deg,#e5f2ff,#fff);
+ text-align:center;
+ padding:55px 15px;
+}
+.hero h2{
+ font-size:27px;
+ color:#123d70;
+ margin:0 0 12px;
+}
 .hero p{margin:5px}
-.container{max-width:1050px;margin:auto;padding:30px 16px}
-.section-title{text-align:center;color:#123d70;font-size:25px;margin-bottom:25px}
-.about,.price-box,.contact{background:white;border-radius:15px;padding:25px;margin-bottom:25px;box-shadow:0 3px 15px #0000000b}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
-.service{background:white;border-radius:13px;padding:22px 10px;text-align:center;box-shadow:0 3px 12px #0000000b}
-.service strong{display:block;color:#145b99;font-size:18px}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.gallery img{width:100%;height:165px;object-fit:cover;border-radius:12px;background:#e5eaf0}
+.container{
+ max-width:1050px;
+ margin:auto;
+ padding:30px 16px;
+}
+.section-title{
+ text-align:center;
+ color:#123d70;
+ font-size:25px;
+ margin-bottom:25px;
+}
+.about,.price-box,.contact{
+ background:white;
+ border-radius:15px;
+ padding:25px;
+ margin-bottom:25px;
+ box-shadow:0 3px 15px #0000000b;
+}
+.services{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+ gap:14px;
+}
+.service{
+ background:white;
+ border-radius:13px;
+ padding:22px 10px;
+ text-align:center;
+ box-shadow:0 3px 12px #0000000b;
+}
+.service strong{
+ display:block;
+ color:#145b99;
+ font-size:18px;
+}
+.gallery{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:12px;
+ margin-bottom:35px;
+}
+.gallery img{
+ width:100%;
+ height:165px;
+ object-fit:cover;
+ border-radius:12px;
+ background:#e5eaf0;
+}
 .gallery figure{margin:0}
-.gallery figcaption{text-align:center;font-size:14px;padding:5px;color:#345}
-.price-table{width:100%;border-collapse:collapse;background:white}
-.price-table th,.price-table td{border-bottom:1px solid #e3e9f0;padding:12px 8px;text-align:center}
-.price-table th{background:#eaf3fc;color:#123d70}
-.notice{font-size:13px;color:#65758a;margin-top:12px}
-.contact{text-align:center;background:#123d70;color:white}
-.contact a{display:inline-block;background:#fff;color:#123d70;text-decoration:none;font-weight:bold;padding:12px 25px;border-radius:30px;margin-top:10px}
-footer{text-align:center;background:#10264a;color:#dce8f5;padding:22px;font-size:13px}
+.price-table{
+ width:100%;
+ border-collapse:collapse;
+ background:white;
+}
+.price-table th,.price-table td{
+ border-bottom:1px solid #e3e9f0;
+ padding:12px 8px;
+ text-align:center;
+}
+.price-table th{
+ background:#eaf3fc;
+ color:#123d70;
+}
+.notice{
+ font-size:13px;
+ color:#65758a;
+ margin-top:12px;
+}
+.contact{
+ text-align:center;
+ background:#123d70;
+ color:white;
+}
+.contact a{
+ display:inline-block;
+ background:#fff;
+ color:#123d70;
+ text-decoration:none;
+ font-weight:bold;
+ padding:12px 25px;
+ border-radius:30px;
+ margin-top:10px;
+}
+footer{
+ text-align:center;
+ background:#10264a;
+ color:#dce8f5;
+ padding:22px;
+ font-size:13px;
+}
 .mobile-call{display:none}
+
 @media(min-width:700px){
-.gallery{grid-template-columns:repeat(3,1fr)}
-.gallery img{height:210px}
+ .gallery{grid-template-columns:repeat(3,1fr)}
+ .gallery img{height:210px}
 }
 @media(max-width:600px){
-header h1{font-size:24px}
-.hero h2{font-size:23px}
-nav a{margin:0 5px;font-size:12px}
-.mobile-call{display:block;position:fixed;bottom:0;left:0;right:0;background:#0874c9;text-align:center;padding:13px;z-index:20}
-.mobile-call a{color:white;text-decoration:none;font-weight:bold}
-body{padding-bottom:48px}
+ header h1{font-size:24px}
+ .hero h2{font-size:23px}
+ nav a{margin:0 5px;font-size:12px}
+ .mobile-call{
+  display:block;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#0874c9;
+  text-align:center;
+  padding:13px;
+  z-index:20;
+ }
+ .mobile-call a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+ }
+ body{padding-bottom:48px}
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -115,8 +236,20 @@ body{padding-bottom:48px}
 </div>
 </section>
 
+<section>
+<h2 class="section-title">냉장고 청소 작업사진</h2>
+<div class="gallery">
+<figure><img src="KakaoTalk_20261116_173834025_10.jpg" alt="냉장고 청소 사진 1"></figure>
+<figure><img src="KakaoTalk_20261116_173834025_11.jpg" alt="냉장고 청소 사진 2"></figure>
+<figure><img src="KakaoTalk_20261116_210300052.jpg" alt="냉장고 청소 사진 3"></figure>
+<figure><img src="KakaoTalk_20261116_210300052_01.jpg" alt="냉장고 청소 사진 4"></figure>
+<figure><img src="KakaoTalk_20261116210300052_02.jpg" alt="냉장고 청소 사진 5"></figure>
+</div>
+</section>
+
 <section id="price" class="price-box">
 <h2 class="section-title">청소 가격 안내</h2>
+
 <h3>에어컨</h3>
 <table class="price-table">
 <tr><th>종류</th><th>가격</th></tr>
@@ -136,6 +269,7 @@ body{padding-bottom:48px}
 <tr><td>세탁기</td><td>70,000원~</td></tr>
 <tr><td>냉장고</td><td>50,000원~</td></tr>
 </table>
+
 <p class="notice">※ 제품 종류, 크기, 모델 및 오염 상태에 따라 추가 비용이 발생할 수 있습니다. 상업용 에어컨은 별도 상담 바랍니다.</p>
 </section>
 
